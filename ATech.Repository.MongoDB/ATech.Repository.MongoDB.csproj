@@ -10,4 +10,8 @@
     <Copyright>Maurizio Attanasi</Copyright>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="2.11.6" />
+  </ItemGroup>
+
 </Project>

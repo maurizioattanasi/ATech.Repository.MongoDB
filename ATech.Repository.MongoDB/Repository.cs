@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
+using MongoDB.Driver;
 
 namespace ATech.Repository.MongoDB
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
+        private readonly IMongoClient mongoClient;
+
+        public Repository(IMongoClient mongoClient) => this.mongoClient = mongoClient ?? throw new ArgumentNullException(nameof(mongoClient));
+
         public void Add(TEntity entity)
         {
             throw new NotImplementedException();
